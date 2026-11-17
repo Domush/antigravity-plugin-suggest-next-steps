@@ -649,63 +649,87 @@ the conclusion of conversation turns.
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl font-bold text-white tracking-tight mb-3">
-              Installation & Configuration
+              1-Click Installation
             </h2>
             <p className="text-slate-400 text-sm">
-              Deploy Next Steps Suggester into your local Google Antigravity setup in seconds.
+              Deploy Next Steps Suggester directly into your Google Antigravity App in 5 seconds.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Method 1: Local Plugin Directory */}
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            {/* Method 1: npx Installer */}
+            <div className="p-6 rounded-2xl bg-slate-900/60 border border-indigo-500/30 space-y-4 shadow-lg shadow-indigo-500/5">
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                <div className="w-8 h-8 rounded-lg bg-indigo-600/20 border border-indigo-500/40 flex items-center justify-center text-indigo-400">
                   <Terminal className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-base">Local Plugin Directory</h3>
-                  <p className="text-xs text-slate-400">Recommended for personal Antigravity setup</p>
+                  <h3 className="font-bold text-white text-base">1-Click npx Installer</h3>
+                  <p className="text-xs text-indigo-300 font-medium">(Recommended) Global or per-project</p>
                 </div>
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Clone into your Antigravity user plugins directory. Antigravity discovers and registers it automatically:
+                Run the official installer to deploy the plugin directly to your Antigravity plugins directory:
               </p>
 
-              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 font-mono text-xs text-indigo-300 flex items-center justify-between">
-                <span>git clone https://github.com/Domush/antigravity-plugin-suggest-next-steps.git ~/.gemini/config/plugins/suggest-next-steps</span>
+              <div className="space-y-2">
+                <div>
+                  <span className="text-[11px] text-slate-400 font-medium">Global (All Antigravity chats):</span>
+                  <div className="p-2.5 bg-slate-950 rounded-lg border border-slate-800 font-mono text-xs text-indigo-300 mt-1 flex items-center justify-between">
+                    <span>npx antigravity-plugin-suggest-next-steps install</span>
+                  </div>
+                </div>
+
+                <div>
+                  <span className="text-[11px] text-slate-400 font-medium">Current project only (Workspace mode):</span>
+                  <div className="p-2.5 bg-slate-950 rounded-lg border border-slate-800 font-mono text-xs text-purple-300 mt-1 flex items-center justify-between">
+                    <span>npx antigravity-plugin-suggest-next-steps install --workspace</span>
+                  </div>
+                </div>
               </div>
 
               <div className="text-[11px] text-slate-400 space-y-1">
-                <p>• Automatically loaded across all your Antigravity chats.</p>
-                <p>• Toggle on/off anytime from Customizations &gt; Plugins.</p>
+                <p>• Zero git cloning or manual folder moving required.</p>
+                <p>• Restart or open Antigravity to activate immediately.</p>
               </div>
             </div>
 
-            {/* Method 2: npm Release */}
+            {/* Method 2: Management & Uninstall */}
             <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 rounded-lg bg-purple-600/20 border border-purple-500/30 flex items-center justify-center text-purple-400">
-                  <Code2 className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-lg bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300">
+                  <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-base">npm Release Workflow</h3>
-                  <p className="text-xs text-slate-400">Automated CI/CD via GitHub Actions</p>
+                  <h3 className="font-bold text-white text-base">Managing the Plugin</h3>
+                  <p className="text-xs text-slate-400">Toggle or remove whenever you want</p>
                 </div>
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed">
-                Includes automated release CI via <code className="text-purple-300">.github/workflows/publish.yml</code>. Tag a version to test and publish to npm with provenance:
+                Easily toggle the plugin on or off, or completely remove it with a single command:
               </p>
 
-              <div className="p-3 bg-slate-950 rounded-xl border border-slate-800 font-mono text-xs text-purple-300">
-                <span>git tag v1.1.0 && git push origin v1.1.0</span>
+              <div className="space-y-2">
+                <div>
+                  <span className="text-[11px] text-slate-400 font-medium">In the Antigravity App UI:</span>
+                  <div className="p-2.5 bg-slate-950 rounded-lg border border-slate-800 text-xs text-slate-300 mt-1">
+                    Open <strong className="text-white">Customizations &gt; Plugins</strong> &rarr; toggle <strong className="text-indigo-300">Next Steps Suggester</strong>.
+                  </div>
+                </div>
+
+                <div>
+                  <span className="text-[11px] text-slate-400 font-medium">Uninstall anytime via CLI:</span>
+                  <div className="p-2.5 bg-slate-950 rounded-lg border border-slate-800 font-mono text-xs text-rose-300 mt-1">
+                    <span>npx antigravity-plugin-suggest-next-steps uninstall</span>
+                  </div>
+                </div>
               </div>
 
               <div className="text-[11px] text-slate-400 space-y-1">
-                <p>• Automated Node 22 test runner verification.</p>
-                <p>• OIDC provenance signing on npm registry.</p>
+                <p>• Clean removal with zero orphan files or leftover configuration.</p>
+                <p>• 100% private, local-first, zero runtime dependencies.</p>
               </div>
             </div>
           </div>
