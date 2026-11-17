@@ -132,7 +132,7 @@ export default function App() {
                 <span className="font-bold text-lg text-white tracking-tight">Next Steps</span>
                 <span className="text-xs px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 font-mono flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
-                  v1.1.0
+                  v1.1.1
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 leading-none">For Google Antigravity AI Agent</p>
@@ -557,7 +557,7 @@ export default function App() {
                     ? `# Next Steps Suggestion Protocol\n\nApply this protocol only as the primary assistant communicating directly with the user. Subagents must never call ask_question or propose next steps.\n\n1. Complete Request First\n2. Context & Summary in Chat\n3. Tool Invocation (at least 2 options, (Recommended) prefix)\n4. Handling Skip`
                     : activeTab === 'skill'
                     ? `name: suggest-next-steps\ndescription: Best practices for proposing proactive next steps using interactive prompt cards.`
-                    : `{\n  "name": "antigravity-plugin-suggest-next-steps",\n  "version": "1.1.0"\n}`;
+                    : `{\n  "name": "antigravity-plugin-suggest-next-steps",\n  "version": "1.1.1"\n}`;
                   copyToClipboard(content);
                 }}
                 className="hover:text-white flex items-center gap-1 transition-colors text-xs"
@@ -624,7 +624,7 @@ the conclusion of conversation turns.
   "name": "antigravity-plugin-suggest-next-steps",
   "displayName": "Next Steps Suggester",
   "description": "Displays interactive prompt cards proposing at least 2 logical next steps at the end of completed turns.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Phillip Webber <github@webbsense.com>",
   "repository": {
     "type": "git",
