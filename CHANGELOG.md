@@ -2,6 +2,12 @@
 
 All notable changes to the **Next Steps Suggester** plugin will be documented in this file.
 
+## [1.1.1] - 2026-11-17
+
+### Added
+- **1-Click npx CLI Installer (`bin/cli.js`)**: Added automated `npx` installer supporting both global (`~/.gemini/config/plugins/suggest-next-steps`) and per-project workspace installation (`.gemini/plugins/suggest-next-steps`).
+- **Streamlined Documentation**: Rewrote `README.md` to be user-centric with 10-second setup instructions and clear workflow illustrations.
+
 ## [1.1.0] - 2026-11-17
 
 ### Added

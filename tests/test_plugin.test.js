@@ -11,7 +11,7 @@ test('plugin.json exists and is valid', () => {
   
   const content = JSON.parse(fs.readFileSync(pluginPath, 'utf8'));
   assert.equal(content.name, 'antigravity-plugin-suggest-next-steps');
-  assert.equal(content.version, '1.1.0');
+  assert.equal(content.version, '1.1.1');
   assert.ok(content.displayName, 'displayName is required');
   assert.ok(content.description, 'description is required');
 });
