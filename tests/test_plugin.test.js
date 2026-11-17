@@ -41,3 +41,12 @@ test('LICENSE and CHANGELOG exist', () => {
   assert.ok(fs.existsSync(path.join(ROOT, 'CHANGELOG.md')), 'CHANGELOG.md should exist');
   assert.ok(fs.existsSync(path.join(ROOT, 'README.md')), 'README.md should exist');
 });
+
+test('bin/cli.js installer exists and is executable', () => {
+  const cliPath = path.join(ROOT, 'bin', 'cli.js');
+  assert.ok(fs.existsSync(cliPath), 'bin/cli.js should exist');
+  const content = fs.readFileSync(cliPath, 'utf8');
+  assert.match(content, /#!\/usr\/bin\/env node/);
+  assert.match(content, /install/);
+  assert.match(content, /uninstall/);
+});

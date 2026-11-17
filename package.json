@@ -27,9 +27,16 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "start": "node ./bin/cli.js",
     "test": "node --test tests/test_plugin.test.js"
   },
+  "bin": {
+    "antigravity-suggest-next-steps": "./bin/cli.js",
+    "antigravity-plugin-suggest-next-steps": "./bin/cli.js",
+    "suggest-next-steps": "./bin/cli.js"
+  },
   "files": [
+    "bin",
     "plugin.json",
     "skills",
     "rules",
