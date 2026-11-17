@@ -1,0 +1,44 @@
+{
+  "name": "antigravity-plugin-suggest-next-steps",
+  "version": "1.1.0",
+  "description": "Antigravity plugin that prompts interactive, clickable prompt chips proposing at least 2 logical next steps at turn conclusions",
+  "type": "module",
+  "license": "MIT",
+  "author": "Phillip Webber <github@webbsense.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Domush/antigravity-plugin-suggest-next-steps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Domush/antigravity-plugin-suggest-next-steps/issues"
+  },
+  "homepage": "https://domush.github.io/antigravity-plugin-suggest-next-steps/",
+  "keywords": [
+    "antigravity",
+    "antigravity-plugin",
+    "gemini",
+    "next-steps",
+    "agent-productivity",
+    "interactive-prompts",
+    "workflow",
+    "ask-question"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "test": "node --test tests/test_plugin.test.js"
+  },
+  "files": [
+    "plugin.json",
+    "skills",
+    "rules",
+    "assets",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
