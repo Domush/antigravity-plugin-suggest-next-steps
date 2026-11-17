@@ -14,6 +14,7 @@ Instead of stopping and typing out a whole new prompt, you click an option and t
 > 🌐 **Try the Live Interactive Simulator:** [domush.github.io/antigravity-plugin-suggest-next-steps](https://domush.github.io/antigravity-plugin-suggest-next-steps/)
 
 ---
+<img width="1016" height="550" alt="image" src="https://github.com/user-attachments/assets/5dbd6b8c-067e-46a9-ac10-8d4031d8e243" />
 
 ## Quick Install (10 Seconds)
 
