@@ -7,11 +7,13 @@ const ROOT = path.resolve('.');
 
 test('plugin.json exists and is valid', () => {
   const pluginPath = path.join(ROOT, 'plugin.json');
+  const pkgPath = path.join(ROOT, 'package.json');
   assert.ok(fs.existsSync(pluginPath), 'plugin.json should exist');
   
   const content = JSON.parse(fs.readFileSync(pluginPath, 'utf8'));
+  const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
   assert.equal(content.name, 'antigravity-plugin-suggest-next-steps');
-  assert.equal(content.version, '1.1.1');
+  assert.equal(content.version, pkg.version);
   assert.ok(content.displayName, 'displayName is required');
   assert.ok(content.description, 'description is required');
 });
@@ -23,17 +25,8 @@ test('rules/AGENTS.md exists and defines the protocol', () => {
   const content = fs.readFileSync(rulePath, 'utf8');
   assert.match(content, /# Next Steps Suggestion Protocol/);
   assert.match(content, /Complete the Request First/);
-  assert.match(content, /Context & Summary in Chat/);
+  assert.match(content, /Mandatory Tool Invocation/);
   assert.match(content, /Handling Skip/);
-});
-
-test('skills/suggest-next-steps/SKILL.md exists and has valid frontmatter', () => {
-  const skillPath = path.join(ROOT, 'skills', 'suggest-next-steps', 'SKILL.md');
-  assert.ok(fs.existsSync(skillPath), 'skills/suggest-next-steps/SKILL.md should exist');
-  
-  const content = fs.readFileSync(skillPath, 'utf8');
-  assert.match(content, /name:\s*suggest-next-steps/);
-  assert.match(content, /description:/);
 });
 
 test('LICENSE and CHANGELOG exist', () => {

@@ -2,6 +2,12 @@
 
 All notable changes to the **Next Steps Suggester** plugin will be documented in this file.
 
+## [1.1.2] - 2026-11-27
+
+### Improved
+- **Automated Release Notes**: Updated the GitHub Actions release workflow to automatically extract and publish the matching `CHANGELOG.md` entry for each tagged release.
+- **Streamlined Rules & Packaging**: Updated package metadata, rules, and repository guidelines for cleaner plugin distribution.
+
 ## [1.1.1] - 2026-11-17
 
 ### Added

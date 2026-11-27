@@ -1,6 +1,7 @@
 {
   "name": "antigravity-plugin-suggest-next-steps",
-  "version": "1.1.1",
+  "displayName": "Suggest Next Steps: A plugin for Google Antigravity App",
+  "version": "1.1.2",
   "description": "Antigravity plugin that prompts interactive, clickable prompt chips proposing at least 2 logical next steps at turn conclusions",
   "type": "module",
   "license": "MIT",
@@ -21,6 +22,7 @@
     "agent-productivity",
     "interactive-prompts",
     "workflow",
+    "agy-plugin",
     "ask-question"
   ],
   "engines": {
@@ -38,7 +40,6 @@
   "files": [
     "bin",
     "plugin.json",
-    "skills",
     "rules",
     "assets",
     "README.md",

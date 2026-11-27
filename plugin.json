@@ -2,7 +2,7 @@
   "name": "antigravity-plugin-suggest-next-steps",
   "displayName": "Next Steps Suggester",
   "description": "Displays interactive prompt cards proposing at least 2 logical next steps at the end of completed turns.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Phillip Webber <github@webbsense.com>",
   "repository": {
     "type": "git",
